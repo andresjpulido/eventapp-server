@@ -1,0 +1,1 @@
+{"version":3,"file":"topicSchema.js","sourceRoot":"","sources":["../../../../src/db/models/topicSchema.js"],"names":[],"mappings":";;AAAA,uCAAkC;AAElC,MAAM,WAAW,GAAG,IAAI,iBAAM,CAC7B;IACC,IAAI,EAAE;QACL,IAAI,EAAE,MAAM;QACZ,QAAQ,EAAE,IAAI;KACd;IACD,WAAW,EAAE;QACZ,IAAI,EAAE,MAAM;QACZ,QAAQ,EAAE,IAAI;KACd;CACD,EACD;IACC,UAAU,EAAE,IAAI;CAChB,CACD,CAAC;AAEF,kBAAe,WAAW,CAAC"}

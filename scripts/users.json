@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Andres",
+        "email": "andresjpulido@gmail.com"
+    },
+    {
+        "name": "Jason",
+        "email": "jason@test.com"
+    },
+    {
+        "name": "James",
+        "email": "james@test.com"
+    },
+    {
+        "name": "Mary",
+        "email": "mary@test.com"
+    },
+    {
+        "name": "Bill",
+        "email": "bill@test.com"
+    },
+    {
+        "name": "Brad",
+        "email": "brad@test.com"
+    },
+    {
+        "name": "Michel",
+        "email": "michel@test.com"
+    },
+    {
+        "name": "John",
+        "email": "john@test.com"
+    }
+]

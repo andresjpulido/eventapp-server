@@ -1,0 +1,602 @@
+[
+    {
+        "name": "Auckland",
+        "region": "Auckland"
+    },
+    {
+        "name": "Hibiscus Coast",
+        "region": "Auckland"
+    },
+    {
+        "name": "Pukekohe",
+        "region": "Auckland"
+    },
+    {
+        "name": "Waiuku",
+        "region": "Auckland"
+    },
+    {
+        "name": "Waiheke West",
+        "region": "Auckland"
+    },
+    {
+        "name": "Beachlands-Pine Harbour",
+        "region": "Auckland"
+    },
+    {
+        "name": "Warkworth",
+        "region": "Auckland"
+    },
+    {
+        "name": "Kumeū-Huapai",
+        "region": "Auckland"
+    },
+    {
+        "name": "Snells Beach",
+        "region": "Auckland"
+    },
+    {
+        "name": "Riverhead",
+        "region": "Auckland"
+    },
+    {
+        "name": "Helensville",
+        "region": "Auckland"
+    },
+    {
+        "name": "Maraetai",
+        "region": "Auckland"
+    },
+    {
+        "name": "Wellsford",
+        "region": "Auckland"
+    },
+    {
+        "name": "Tauranga",
+        "region": "Bay of Plenty"
+    },
+    {
+        "name": "Rotorua",
+        "region": "Bay of Plenty"
+    },
+    {
+        "name": "Whakatāne",
+        "region": "Bay of Plenty"
+    },
+    {
+        "name": "Te Puke",
+        "region": "Bay of Plenty"
+    },
+    {
+        "name": "Kawerau",
+        "region": "Bay of Plenty"
+    },
+    {
+        "name": "Katikati",
+        "region": "Bay of Plenty"
+    },
+    {
+        "name": "Ngongotahā",
+        "region": "Bay of Plenty"
+    },
+    {
+        "name": "Ōpōtiki",
+        "region": "Bay of Plenty"
+    },
+    {
+        "name": "Omokoroa",
+        "region": "Bay of Plenty"
+    },
+    {
+        "name": "Ōhope",
+        "region": "Bay of Plenty"
+    },
+    {
+        "name": "Waihi Beach-Bowentown",
+        "region": "Bay of Plenty"
+    },
+    {
+        "name": "Murupara ",
+        "region": "Bay of Plenty "
+    },
+    {
+        "name": "Edgecumbe ",
+        "region": "Bay of Plenty "
+    },
+    {
+        "name": "Christchurch",
+        "region": "Canterbury"
+    },
+    {
+        "name": "Timaru",
+        "region": "Canterbury"
+    },
+    {
+        "name": "Rolleston",
+        "region": "Canterbury"
+    },
+    {
+        "name": "Ashburton",
+        "region": "Canterbury"
+    },
+    {
+        "name": "Rangiora",
+        "region": "Canterbury"
+    },
+    {
+        "name": "Kaiapoi",
+        "region": "Canterbury"
+    },
+    {
+        "name": "Lincoln",
+        "region": "Canterbury"
+    },
+    {
+        "name": "Prebbleton",
+        "region": "Canterbury"
+    },
+    {
+        "name": "Temuka",
+        "region": "Canterbury"
+    },
+    {
+        "name": "Pegasus",
+        "region": "Canterbury"
+    },
+    {
+        "name": "Waimate",
+        "region": "Canterbury"
+    },
+    {
+        "name": "Woodend",
+        "region": "Canterbury"
+    },
+    {
+        "name": "Lyttelton",
+        "region": "Canterbury"
+    },
+    {
+        "name": "Darfield",
+        "region": "Canterbury"
+    },
+    {
+        "name": "Geraldine",
+        "region": "Canterbury"
+    },
+    {
+        "name": "West Melton",
+        "region": "Canterbury"
+    },
+    {
+        "name": "Kaikōura",
+        "region": "Canterbury"
+    },
+    {
+        "name": "Oxford",
+        "region": "Canterbury"
+    },
+    {
+        "name": "Leeston",
+        "region": "Canterbury"
+    },
+    {
+        "name": "Amberley ",
+        "region": "Canterbury "
+    },
+    {
+        "name": "Methven ",
+        "region": "Canterbury "
+    },
+    {
+        "name": "Gisborne",
+        "region": "Gisborne"
+    },
+    {
+        "name": "Napier",
+        "region": "Hawke's Bay"
+    },
+    {
+        "name": "Hastings",
+        "region": "Hawke's Bay"
+    },
+    {
+        "name": "Havelock North",
+        "region": "Hawke's Bay"
+    },
+    {
+        "name": "Wairoa",
+        "region": "Hawke's Bay"
+    },
+    {
+        "name": "Waipukurau",
+        "region": "Hawke's Bay"
+    },
+    {
+        "name": "Clive",
+        "region": "Hawke's Bay"
+    },
+    {
+        "name": "Waipawa",
+        "region": "Hawke's Bay"
+    },
+    {
+        "name": "Bulls ",
+        "region": "Manawatu-Whanganui "
+    },
+    {
+        "name": "Foxton Beach ",
+        "region": "Manawatu-Whanganui "
+    },
+    {
+        "name": "Palmerston North",
+        "region": "Manawatū-Whanganui"
+    },
+    {
+        "name": "Whanganui",
+        "region": "Manawatū-Whanganui"
+    },
+    {
+        "name": "Levin",
+        "region": "Manawatū-Whanganui"
+    },
+    {
+        "name": "Feilding",
+        "region": "Manawatū-Whanganui"
+    },
+    {
+        "name": "Dannevirke",
+        "region": "Manawatū-Whanganui"
+    },
+    {
+        "name": "Marton",
+        "region": "Manawatū-Whanganui"
+    },
+    {
+        "name": "Taumarunui",
+        "region": "Manawatū-Whanganui"
+    },
+    {
+        "name": "Foxton",
+        "region": "Manawatū-Whanganui"
+    },
+    {
+        "name": "Ashhurst",
+        "region": "Manawatū-Whanganui"
+    },
+    {
+        "name": "Pahiatua",
+        "region": "Manawatū-Whanganui"
+    },
+    {
+        "name": "Taihape ",
+        "region": "Manawatū-Whanganui "
+    },
+    {
+        "name": "Blenheim",
+        "region": "Marlborough"
+    },
+    {
+        "name": "Picton",
+        "region": "Marlborough"
+    },
+    {
+        "name": "Renwick",
+        "region": "Marlborough"
+    },
+    {
+        "name": "Nelson",
+        "region": "Nelson"
+    },
+    {
+        "name": "Whangārei",
+        "region": "Northland"
+    },
+    {
+        "name": "Kerikeri",
+        "region": "Northland"
+    },
+    {
+        "name": "Kaitaia",
+        "region": "Northland"
+    },
+    {
+        "name": "Dargaville",
+        "region": "Northland"
+    },
+    {
+        "name": "Kaikohe",
+        "region": "Northland"
+    },
+    {
+        "name": "One Tree Point",
+        "region": "Northland"
+    },
+    {
+        "name": "Ruakākā",
+        "region": "Northland"
+    },
+    {
+        "name": "Mangawhai Heads ",
+        "region": "Northland "
+    },
+    {
+        "name": "Moerewa ",
+        "region": "Northland "
+    },
+    {
+        "name": "Dunedin",
+        "region": "Otago"
+    },
+    {
+        "name": "Queenstown",
+        "region": "Otago"
+    },
+    {
+        "name": "Mosgiel",
+        "region": "Otago"
+    },
+    {
+        "name": "Oamaru",
+        "region": "Otago"
+    },
+    {
+        "name": "Wanaka",
+        "region": "Otago"
+    },
+    {
+        "name": "Lake Hayes",
+        "region": "Otago"
+    },
+    {
+        "name": "Cromwell",
+        "region": "Otago"
+    },
+    {
+        "name": "Alexandra",
+        "region": "Otago"
+    },
+    {
+        "name": "Balclutha",
+        "region": "Otago"
+    },
+    {
+        "name": "Arrowtown",
+        "region": "Otago"
+    },
+    {
+        "name": "Milton",
+        "region": "Otago"
+    },
+    {
+        "name": "Lake Hāwea ",
+        "region": "Otago "
+    },
+    {
+        "name": "Invercargill",
+        "region": "Southland"
+    },
+    {
+        "name": "Gore",
+        "region": "Southland"
+    },
+    {
+        "name": "Te Anau",
+        "region": "Southland"
+    },
+    {
+        "name": "Winton",
+        "region": "Southland"
+    },
+    {
+        "name": "Bluff ",
+        "region": "Southland "
+    },
+    {
+        "name": "New Plymouth",
+        "region": "Taranaki"
+    },
+    {
+        "name": "Hāwera",
+        "region": "Taranaki"
+    },
+    {
+        "name": "Waitara",
+        "region": "Taranaki"
+    },
+    {
+        "name": "Stratford",
+        "region": "Taranaki"
+    },
+    {
+        "name": "Inglewood",
+        "region": "Taranaki"
+    },
+    {
+        "name": "Eltham ",
+        "region": "Taranaki "
+    },
+    {
+        "name": "Richmond",
+        "region": "Tasman"
+    },
+    {
+        "name": "Motueka",
+        "region": "Tasman"
+    },
+    {
+        "name": "Wakefield",
+        "region": "Tasman"
+    },
+    {
+        "name": "Brightwater",
+        "region": "Tasman"
+    },
+    {
+        "name": "Hamilton",
+        "region": "Waikato"
+    },
+    {
+        "name": "Taupō",
+        "region": "Waikato"
+    },
+    {
+        "name": "Cambridge",
+        "region": "Waikato"
+    },
+    {
+        "name": "Tokoroa",
+        "region": "Waikato"
+    },
+    {
+        "name": "Te Awamutu",
+        "region": "Waikato"
+    },
+    {
+        "name": "Huntly",
+        "region": "Waikato"
+    },
+    {
+        "name": "Matamata",
+        "region": "Waikato"
+    },
+    {
+        "name": "Morrinsville",
+        "region": "Waikato"
+    },
+    {
+        "name": "Ngāruawāhia",
+        "region": "Waikato"
+    },
+    {
+        "name": "Thames",
+        "region": "Waikato"
+    },
+    {
+        "name": "Whitianga",
+        "region": "Waikato"
+    },
+    {
+        "name": "Waihi",
+        "region": "Waikato"
+    },
+    {
+        "name": "Tuakau",
+        "region": "Waikato"
+    },
+    {
+        "name": "Pōkeno",
+        "region": "Waikato"
+    },
+    {
+        "name": "Te Kuiti",
+        "region": "Waikato"
+    },
+    {
+        "name": "Te Aroha",
+        "region": "Waikato"
+    },
+    {
+        "name": "Paeroa",
+        "region": "Waikato"
+    },
+    {
+        "name": "Putāruru",
+        "region": "Waikato"
+    },
+    {
+        "name": "Whangamatā",
+        "region": "Waikato"
+    },
+    {
+        "name": "Turangi",
+        "region": "Waikato"
+    },
+    {
+        "name": "Raglan",
+        "region": "Waikato"
+    },
+    {
+        "name": "Otorohanga",
+        "region": "Waikato"
+    },
+    {
+        "name": "Kihikihi",
+        "region": "Waikato"
+    },
+    {
+        "name": "Te Kauwhata ",
+        "region": "Waikato "
+    },
+    {
+        "name": "Coromandel ",
+        "region": "Waikato "
+    },
+    {
+        "name": "Wellington",
+        "region": "Wellington"
+    },
+    {
+        "name": "Lower Hutt",
+        "region": "Wellington"
+    },
+    {
+        "name": "Porirua",
+        "region": "Wellington"
+    },
+    {
+        "name": "Upper Hutt",
+        "region": "Wellington"
+    },
+    {
+        "name": "Paraparaumu",
+        "region": "Wellington"
+    },
+    {
+        "name": "Masterton",
+        "region": "Wellington"
+    },
+    {
+        "name": "Waikanae",
+        "region": "Wellington"
+    },
+    {
+        "name": "Carterton",
+        "region": "Wellington"
+    },
+    {
+        "name": "Ōtaki",
+        "region": "Wellington"
+    },
+    {
+        "name": "Greytown",
+        "region": "Wellington"
+    },
+    {
+        "name": "Featherston",
+        "region": "Wellington"
+    },
+    {
+        "name": "Ōtaki Beach ",
+        "region": "Wellington "
+    },
+    {
+        "name": "Martinborough ",
+        "region": "Wellington "
+    },
+    {
+        "name": "Paekākāriki ",
+        "region": "Wellington "
+    },
+    {
+        "name": "Greymouth",
+        "region": "West Coast"
+    },
+    {
+        "name": "Westport",
+        "region": "West Coast"
+    },
+    {
+        "name": "Hokitika",
+        "region": "West Coast"
+    }
+]
