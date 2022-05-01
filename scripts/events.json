@@ -1,145 +1,104 @@
 [
     {
         "title": "Data Science Discussion Auckland",
-        "description": "This is a group for anyone interested in Data Science and Machine Learning. We try to focus on intermediate to advanced level material. But if you are new to Data Science, we are a very welcoming group and we encourage you to come along as you will still be able to get a lot out of the discussion. The aim of the group is to provide a place for us all to connect and to learn." 
+        "description": "This is a group for anyone interested in Data Science and Machine Learning. We try to focus on intermediate to advanced level material. But if you are new to Data Science, we are a very welcoming group and we encourage you to come along as you will still be able to get a lot out of the discussion. The aim of the group is to provide a place for us all to connect and to learn.",
+        "longitude": 174.758560,
+        "latitude": -36.850033
     },
     {
         "title": "Auckland Cryptocurrency & Blockchain Meetup 1",
-        "description": "Blockchain, Crypto and Tech - The Auckland Meetup  Come and join us for Auckland monthly blockchain and cryptocurrency  community meet up! We host a series of monthly community meetups for like minded people to chat about everything this remarkable technology has to offer and more! Not strictly crypto related.  Every last Wednesday of the month there’s always a group of us somewhere! Bring your friends, ideas, questions and come have a chat.    We look forward to seeing you there for a bite to eat and a couple of drinks!" 
+        "description": "Blockchain, Crypto and Tech - The Auckland Meetup  Come and join us for Auckland monthly blockchain and cryptocurrency  community meet up! We host a series of monthly community meetups for like minded people to chat about everything this remarkable technology has to offer and more! Not strictly crypto related.  Every last Wednesday of the month there’s always a group of us somewhere! Bring your friends, ideas, questions and come have a chat.    We look forward to seeing you there for a bite to eat and a couple of drinks!",
+        "longitude": 174.75571685837247,
+        "latitude": -36.84921309945348
     },
     {
         "title": "JavaScript for Creatives: Welcome Meeting!",
         "description": "This is an online event to welcome newbies to the group and to re-welcome existing members to the group in order to keep the JavaScript for Creatives spirit alive!  I had created a Discord server called 'JavaScript for Creatives', however lets go with Zoom for now before we look at alternatives. Join Zoom Meeting  https://us02web.zoom.us/j/83672265860?pwd=c0lXalpkZXRDMGV3RUt6Y1lILzBlUT09   Meeting ID: 836 7226 5860  Passcode: 408485",
-        "creator": {
-            "name": "apulido",
-            "email": "apulido@gmail.com",
-            "_id": "626000e4455090ac5cc753f4"
-        }
+        "longitude": 174.7589623313624,
+        "latitude": -36.85032060700898
     },
     {
         "title": "Auckland Cryptocurrency & Blockchain Meetup 2 ",
         "description": "Blockchain, Crypto and Tech - The Auckland Meetup  Come and join us for Auckland monthly blockchain and cryptocurrency community meet up! We host a series of monthly community meetups for like minded people to chat about everything this remarkable technology has to offer and more! Not strictly crypto related.  Every last Wednesday of the month there’s always a group of us somewhere! Bring your friends, ideas, questions and come have a chat.  We look forward to seeing you there for a bite to eat and a couple of drinks!",
-        "creator": {
-            "name": "apulido",
-            "email": "apulido@gmail.com",
-            "_id": "626000e4455090ac5cc753f4"
-        }
+        "longitude": 174.75979918059616,
+        "latitude": -36.84883534126895
     },
     {
         "title": "Auckland Cryptocurrency & Blockchain Meetup 3",
         "description": "Blockchain, Crypto and Tech - The Auckland Meetup  Come and join us for Auckland monthly blockchain and cryptocurrency community meet up! We host a series of monthly community meetups for like minded people to chat about everything this remarkable technology has to offer and more! Not strictly crypto related.  Every last Wednesday of the month there’s always a group of us somewhere! Bring your friends, ideas, questions and come have a chat.  We look forward to seeing you there for a bite to eat and a couple of drinks!",
-        "creator": {
-            "name": "apulido",
-            "email": "apulido@gmail.com",
-            "_id": "626000e4455090ac5cc753f4"
-        }
+        "longitude": 174.76265841536633,
+        "latitude": -36.84888685385735
     },
     {
         "title": "Auckland Cryptocurrency & Blockchain Meetup 4",
         "description": "Blockchain, Crypto and Tech - The Auckland Meetup  Come and join us for Auckland monthly blockchain and cryptocurrency community meet up! We host a series of monthly community meetups for like minded people to chat about everything this remarkable technology has to offer and more! Not strictly crypto related.  Every last Wednesday of the month there’s always a group of us somewhere! Bring your friends, ideas, questions and come have a chat.  We look forward to seeing you there for a bite to eat and a couple of drinks!",
-        "creator": {
-            "name": "apulido",
-            "email": "apulido@gmail.com",
-            "_id": "626000e4455090ac5cc753f4"
-        }
+        "longitude": 174.76633840618862,
+        "latitude": -36.8490285132886
     },
     {
         "title": "Auckland Cryptocurrency & Blockchain Meetup 5",
         "description": "Blockchain, Crypto and Tech - The Auckland Meetup  Come and join us for Auckland monthly blockchain and cryptocurrency community meet up! We host a series of monthly community meetups for like minded people to chat about everything this remarkable technology has to offer and more! Not strictly crypto related.  Every last Wednesday of the month there’s always a group of us somewhere! Bring your friends, ideas, questions and come have a chat.  We look forward to seeing you there for a bite to eat and a couple of drinks!",
-        "creator": {
-            "name": "apulido",
-            "email": "apulido@gmail.com",
-            "_id": "626000e4455090ac5cc753f4"
-        }
+        "longitude": 174.76659053384236,
+        "latitude": -36.84810557584156
     },
     {
         "title": "Auckland Cryptocurrency & Blockchain Meetup 6",
         "description": "Blockchain, Crypto and Tech - The Auckland Meetup  Come and join us for Auckland monthly blockchain and cryptocurrency community meet up! We host a series of monthly community meetups for like minded people to chat about everything this remarkable technology has to offer and more! Not strictly crypto related.  Every last Wednesday of the month there’s always a group of us somewhere! Bring your friends, ideas, questions and come have a chat.  We look forward to seeing you there for a bite to eat and a couple of drinks!",
-        "creator": {
-            "name": "apulido",
-            "email": "apulido@gmail.com",
-            "_id": "626000e4455090ac5cc753f4"
-        }
+        "longitude": 174.76498657278822,
+        "latitude": -36.8474917089325
     },
     {
         "title": "Auckland Cryptocurrency & Blockchain Meetup 7",
         "description": "Blockchain, Crypto and Tech - The Auckland Meetup  Come and join us for Auckland monthly blockchain and cryptocurrency community meet up! We host a series of monthly community meetups for like minded people to chat about everything this remarkable technology has to offer and more! Not strictly crypto related.  Every last Wednesday of the month there’s always a group of us somewhere! Bring your friends, ideas, questions and come have a chat.  We look forward to seeing you there for a bite to eat and a couple of drinks!",
-        "creator": {
-            "name": "apulido",
-            "email": "apulido@gmail.com",
-            "_id": "626000e4455090ac5cc753f4"
-        }
+        "longitude": 174.76260477112288,
+        "latitude": -36.8475002945174
     },
     {
         "title": "Auckland Cryptocurrency & Blockchain Meetup 8",
         "description": "Blockchain, Crypto and Tech - The Auckland Meetup  Come and join us for Auckland monthly blockchain and cryptocurrency community meet up! We host a series of monthly community meetups for like minded people to chat about everything this remarkable technology has to offer and more! Not strictly crypto related.  Every last Wednesday of the month there’s always a group of us somewhere! Bring your friends, ideas, questions and come have a chat.  We look forward to seeing you there for a bite to eat and a couple of drinks!",
-        "creator": {
-            "name": "apulido",
-            "email": "apulido@gmail.com",
-            "_id": "626000e4455090ac5cc753f4"
-        }
+        "longitude": 174.765689311531,
+        "latitude": -36.84673188084467
     },
     {
         "title": "Auckland Cryptocurrency & Blockchain Meetup 9",
         "description": "Blockchain, Crypto and Tech - The Auckland Meetup  Come and join us for Auckland monthly blockchain and cryptocurrency community meet up! We host a series of monthly community meetups for like minded people to chat about everything this remarkable technology has to offer and more! Not strictly crypto related.  Every last Wednesday of the month there’s always a group of us somewhere! Bring your friends, ideas, questions and come have a chat.  We look forward to seeing you there for a bite to eat and a couple of drinks!",
-        "creator": {
-            "name": "apulido",
-            "email": "apulido@gmail.com",
-            "_id": "626000e4455090ac5cc753f4"
-        }
+        "longitude": 174.76856463966757,
+        "latitude": -36.84679627334781
     },
     {
         "title": "Auckland Cryptocurrency & Blockchain Meetup 10",
         "description": "Blockchain, Crypto and Tech - The Auckland Meetup  Come and join us for Auckland monthly blockchain and cryptocurrency community meet up! We host a series of monthly community meetups for like minded people to chat about everything this remarkable technology has to offer and more! Not strictly crypto related.  Every last Wednesday of the month there’s always a group of us somewhere! Bring your friends, ideas, questions and come have a chat.  We look forward to seeing you there for a bite to eat and a couple of drinks!",
-        "creator": {
-            "name": "apulido",
-            "email": "apulido@gmail.com",
-            "_id": "626000e4455090ac5cc753f4"
-        }
+        "longitude": 174.76947659071178,
+        "latitude": -36.84716974879692
     },
     {
         "title": "Auckland Cryptocurrency & Blockchain Meetup 11",
         "description": "Blockchain, Crypto and Tech - The Auckland Meetup  Come and join us for Auckland monthly blockchain and cryptocurrency community meet up! We host a series of monthly community meetups for like minded people to chat about everything this remarkable technology has to offer and more! Not strictly crypto related.  Every last Wednesday of the month there’s always a group of us somewhere! Bring your friends, ideas, questions and come have a chat.  We look forward to seeing you there for a bite to eat and a couple of drinks!",
-        "creator": {
-            "name": "apulido",
-            "email": "apulido@gmail.com",
-            "_id": "626000e4455090ac5cc753f4"
-        }
+        "longitude": 174.76841443591505,
+        "latitude": -36.84667607396502
     },
     {
         "title": "Auckland Cryptocurrency & Blockchain Meetup 12",
         "description": "Blockchain, Crypto and Tech - The Auckland Meetup  Come and join us for Auckland monthly blockchain and cryptocurrency community meet up! We host a series of monthly community meetups for like minded people to chat about everything this remarkable technology has to offer and more! Not strictly crypto related.  Every last Wednesday of the month there’s always a group of us somewhere! Bring your friends, ideas, questions and come have a chat.  We look forward to seeing you there for a bite to eat and a couple of drinks!",
-        "creator": {
-            "name": "apulido",
-            "email": "apulido@gmail.com",
-            "_id": "626000e4455090ac5cc753f4"
-        }
+        "longitude": 174.76417654558492,
+        "latitude": -36.84620386026521
     },
     {
         "title": "Auckland Cryptocurrency & Blockchain Meetup 13",
         "description": "Blockchain, Crypto and Tech - The Auckland Meetup  Come and join us for Auckland monthly blockchain and cryptocurrency community meet up! We host a series of monthly community meetups for like minded people to chat about everything this remarkable technology has to offer and more! Not strictly crypto related.  Every last Wednesday of the month there’s always a group of us somewhere! Bring your friends, ideas, questions and come have a chat.  We look forward to seeing you there for a bite to eat and a couple of drinks!",
-        "creator": {
-            "name": "apulido",
-            "email": "apulido@gmail.com",
-            "_id": "626000e4455090ac5cc753f4"
-        }
+        "longitude": 174.76824813892915,
+        "latitude": -36.845778865439385
     },
     {
         "title": "Auckland Cryptocurrency & Blockchain Meetup 14",
         "description": "Blockchain, Crypto and Tech - The Auckland Meetup  Come and join us for Auckland monthly blockchain and cryptocurrency community meet up! We host a series of monthly community meetups for like minded people to chat about everything this remarkable technology has to offer and more! Not strictly crypto related.  Every last Wednesday of the month there’s always a group of us somewhere! Bring your friends, ideas, questions and come have a chat.  We look forward to seeing you there for a bite to eat and a couple of drinks!",
-        "creator": {
-            "name": "apulido",
-            "email": "apulido@gmail.com",
-            "_id": "626000e4455090ac5cc753f4"
-        }
+        "longitude": 174.7655820231263,
+        "latitude": -36.84519503031467
     },
     {
         "title": "Auckland Cryptocurrency & Blockchain Meetup 15",
         "description": "Blockchain, Crypto and Tech - The Auckland Meetup  Come and join us for Auckland monthly blockchain and cryptocurrency community meet up! We host a series of monthly community meetups for like minded people to chat about everything this remarkable technology has to offer and more! Not strictly crypto related.  Every last Wednesday of the month there’s always a group of us somewhere! Bring your friends, ideas, questions and come have a chat.  We look forward to seeing you there for a bite to eat and a couple of drinks!",
-        "creator": {
-            "name": "apulido",
-            "email": "apulido@gmail.com",
-            "_id": "626000e4455090ac5cc753f4"
-        } 
+        "longitude": 174.76661735581783,
+        "latitude": -36.843756888014696
     }
 ]

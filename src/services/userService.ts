@@ -19,7 +19,7 @@ export default class userService {
 	}
 
 	public async create(progression) {
-		const newProgression = new userModel(progression);
+		let newProgression = new userModel(progression);
 		return await newProgression.save();
 	}
 }

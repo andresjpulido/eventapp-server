@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/app.ts",
   "scripts": {
-    "populatedb":"npx ts-node ./scripts/loadData.ts",
+    "populatedb": "npx ts-node ./scripts/loadData.ts",
     "clean": "rm -rf build && mkdir build",
     "build": "tsc",
     "start": "nodemon",
@@ -48,10 +48,12 @@
   },
   "homepage": "https://github.com/andresjpulido/eventapp-server#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.0.5",
     "reflect-metadata": "^0.1.13",
     "typedi": "^0.10.0",

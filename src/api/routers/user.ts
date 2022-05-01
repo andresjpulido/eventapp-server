@@ -2,12 +2,12 @@ import { Router, Request, Response } from "express";
 import userService from "../../services/userService";
 import { Container } from "typedi";
 
-const auth = require("../middlewares/auth");
+import middlewares from '../middlewares';
 const route = Router();
 
 export default (app) => {
 
-	app.get("/users", async (req, res, next) => {
+	app.get("/users", middlewares.auth, async (req, res, next) => {
 		const queryObj = req.query;
 		const serviceInstance = Container.get(userService);
 		let list = [];

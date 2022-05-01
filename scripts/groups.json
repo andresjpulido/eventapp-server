@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Developers",
+        "description": "Group of developers fom Auckland."
+    },
+    {
+        "name": "IT security",
+        "description": "Group of IT security enginere fom Auckland."
+    },
+    {
+        "name": "IT devops",
+        "description": "Group of IT developers fom Auckland."
+    },
+    {
+        "name": "Google Developers",
+        "description": "Group of google developers fom Auckland."
+    },
+    {
+        "name": "Javascript Developers",
+        "description": "Group of javascript developers fom Auckland."
+    },
+    {
+        "name": "Python Developers",
+        "description": "Group of python developers fom Auckland."
+    }
+]
