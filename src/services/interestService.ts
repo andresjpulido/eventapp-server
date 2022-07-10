@@ -1,16 +1,16 @@
 import { Service } from "typedi";
-import { labelModel } from "../db/models";
+import { interestModel } from "../db/models";
 const mongoose = require("mongoose");
 
 @Service()
-export default class LabelService {
+export default class InterestService {
 	constructor() {}
 
 	public async get(queryObj) {
 		if (queryObj._id)
 			if (!mongoose.Types.ObjectId.isValid(queryObj._id)) queryObj._id = null;
 
-		return await labelModel.find(queryObj);
+		return await interestModel.find(queryObj);
 	}
 
 	public async delete(activityId) {
@@ -19,7 +19,7 @@ export default class LabelService {
 
 		if (!activityId) return null;
   
-		return await labelModel.findByIdAndDelete(activityId);
+		return await interestModel.findByIdAndDelete(activityId);
 	}
 
 	public async update(id, activity) {
@@ -27,12 +27,12 @@ export default class LabelService {
 
 		if (!id) return;
  
-		await labelModel.findByIdAndUpdate(id, activity);
-		return await labelModel.findById(id);
+		await interestModel.findByIdAndUpdate(id, activity);
+		return await interestModel.findById(id);
 	}
 
 	public async create(activity) {
-		const newActivity = new labelModel(activity);
+		const newActivity = new interestModel(activity);
 		return await newActivity.save();
 	}
 }

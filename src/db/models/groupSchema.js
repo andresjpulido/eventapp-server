@@ -15,6 +15,12 @@ const groupSchema = new Schema(
 			ref: "City",
 			required: true,
 		},
+		interests: [
+			{
+				type: Schema.Types.ObjectId,
+				ref: "Interest",
+			},
+		],
 	},
 	{
 		timestamps: true,

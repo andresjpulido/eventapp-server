@@ -10,7 +10,7 @@ export default class GroupService {
 		if (queryObj._id)
 			if (!mongoose.Types.ObjectId.isValid(queryObj._id)) queryObj._id = null;
 
-		return await groupModel.find(queryObj);
+		return await groupModel.find(queryObj).populate("interests").populate("city");
 	}
 
 	public async delete(activityId) {

@@ -1,12 +1,12 @@
-import { Service } from "typedi"; 
-import {userModel}  from "../db/models";
- 
+import { Service } from "typedi";
+import { userModel } from "../db/models";
+
 @Service()
 export default class userService {
 	constructor() {}
- 
+
 	public async get(queryObj) {
-		return await userModel.find(queryObj);
+		return await userModel.find(queryObj).populate("city");
 	}
 
 	public async delete(progressionId: String) {
@@ -20,6 +20,8 @@ export default class userService {
 
 	public async create(progression) {
 		let newProgression = new userModel(progression);
+ 
 		return await newProgression.save();
+	 
 	}
 }

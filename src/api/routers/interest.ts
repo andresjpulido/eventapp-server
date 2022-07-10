@@ -1,12 +1,12 @@
 import { Router, Request, Response } from "express";
-import labelService from "../../services/labelService";
+import interestService from "../../services/interestService";
 import { Container } from "typedi";
 
 const auth = require("../middlewares/auth");
 const route = Router();
-
+ 
 export default (app) => {
-	app.get("/labels", async (req, res, next) => {
+	app.get("/interest", async (req, res, next) => {
 		let queryObj = req.query;
 		let list = [];
 
@@ -14,7 +14,7 @@ export default (app) => {
 		
 		if (typeof queryObj !== "object") queryObj = {};
 		
-		const serviceInstance = Container.get(labelService);
+		const serviceInstance = Container.get(interestService);
 		
 		list = await serviceInstance.get(queryObj);
 		
@@ -24,13 +24,13 @@ export default (app) => {
 
 		return res.json(list);
 	});
-	app.get("/labels/:id", async (req, res, next) => {
+	app.get("/interest/:id", async (req, res, next) => {
 		//Validate params
 		const id = req.params.id;
 		let queryObj = { _id: id };
 		let list = [];
 
-		const serviceInstance = Container.get(labelService);
+		const serviceInstance = Container.get(interestService);
 		 
 		list = await serviceInstance.get(queryObj);
 		
@@ -38,19 +38,19 @@ export default (app) => {
 		
 		return res.json(list[0]);
 	});
-	app.put("/labels/:id", async (req, res, next) => {
+	app.put("/interest/:id", async (req, res, next) => {
 		//Validate params
 		const id = req.params.id;
 		let list = [];
 		
-		const serviceInstance = Container.get(labelService);
+		const serviceInstance = Container.get(interestService);
 		
 		console.log(req.body);
 		list = await serviceInstance.update(id, req.body);
 
 		return res.json(list);
 	});
-	app.post("/labels", async (req, res, next) => {
+	app.post("/interest", async (req, res, next) => {
 		//Validate params
 
 		let activity = req.body;
@@ -64,17 +64,17 @@ export default (app) => {
 
 	 
 
-		const serviceInstance = Container.get(labelService);
+		const serviceInstance = Container.get(interestService);
 		let list = [];
 		list = await serviceInstance.create(activity);
 
 		return res.json(list);
 	});
-	app.delete("/labels/:id", async (req, res, next) => {
+	app.delete("/interest/:id", async (req, res, next) => {
 		//Validate params
 		const id = req.params.id;
 
-		const serviceInstance = Container.get(labelService);
+		const serviceInstance = Container.get(interestService);
 
 		let obj = await serviceInstance.delete(id);
 

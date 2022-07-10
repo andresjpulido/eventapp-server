@@ -21,11 +21,7 @@ const eventSchema = new Schema(
 		longitude: {
 			type: Number,
 			required: false,
-		},
-		group: {
-			type: String,
-			required: false,
-		},
+		}, 
 		creator: {
 			type: Schema.Types.ObjectId,
 			ref: "User",

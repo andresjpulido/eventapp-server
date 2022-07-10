@@ -5,6 +5,7 @@ export default async function connect() {
 	try {
 		await mongoose.connect(`mongodb://${model.MONGODB_HOST}/${model.MONGODB_DBNAME}`, {});
 		console.log("connected to DB")
+		//mongoose.connection.db.dropDatabase();
 		 
 	} catch (error) {
 		console.log(error.description);

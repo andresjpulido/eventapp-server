@@ -1,6 +1,6 @@
 import { Schema } from "mongoose";
 
-const labelSchema = new Schema(
+const interestSchema = new Schema(
 	{
 		name: {
 			type: String,
@@ -12,4 +12,4 @@ const labelSchema = new Schema(
 	}
 );
 
-export default labelSchema;
+export default interestSchema;

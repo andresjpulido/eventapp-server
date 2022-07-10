@@ -6,7 +6,8 @@ import activity from "./routers/activity";
 import topic from "./routers/topics";
 import event from "./routers/event";
 import group from "./routers/group";
-import label from "./routers/label";
+import label from "./routers/interest";
+import chat from "./routers/chat";
 
 export default () => {
 	const app = Router();
@@ -19,6 +20,7 @@ export default () => {
 	group(app);
 	label(app);
 	auth(app);
+	chat(app);
 
 	return app;
 };

@@ -3,12 +3,12 @@ import { Container } from "typedi";
 
 export default (app) => {
 	app.post("/signup", async (req, res, next) => {
-		const { password, passwordConfirmation, email, username } = req.body;
+		const { password, passwordConfirmation, email, name } = req.body;
 		const serviceInstance = Container.get(authService);
 
 		//validate input
 		let user = {
-			name: username,
+			name: name,
 			password: password,
 			email: email,
 		};
@@ -19,37 +19,42 @@ export default (app) => {
 
 	});
 
-	app.get("/signin", async (req, res, next) => {
-		let list = [];
-/*
+	app.post("/signin", async (req, res, next) => {
+		let user = {};
+ console.log(req.query, req.body)
 		try {
-			const queryObj = req.query;
-			const serviceInstance = Container.get(userService);
+			const queryObj = req.body;
+			const serviceInstance = Container.get(authService);
 
-			list = await serviceInstance.get(queryObj);
+			user = await serviceInstance.signin(queryObj);
+
 		} catch (e) {
 			console.log(e);
 		}
-		return res.json(list);
-		*/
-		console.log("ok");
-		return res.json("ok");
+
+		return res.json(user);
+		 
 	});
 
-	app.get("/signout", async (req, res, next) => {
+	app.post("/signout", async (req, res, next) => {
 		try {
+			//TODO implement tokens blacklist
 		} catch (e) {
 			console.log(e);
 		}
 		return res.json(true);
 	});
 
-	app.get("/whoami", async (req, res, next) => {
+	app.post("/whoami", async (req, res, next) => {
 		let token = req.body.token;
-		console.log(token);
+  	const serviceInstance = Container.get(authService);
 
-		let list = [];
+		let userBD = await serviceInstance.whoami(token);
 
-		return res.json(token);
+		if(userBD!==null)
+		return res.json(userBD[0]);
+		else
+		return res.json({})
 	});
+
 };

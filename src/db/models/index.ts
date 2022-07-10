@@ -5,7 +5,9 @@ import ProgressionSchema from "./progressionSchema";
 import activitySchema from "./activitySchema";
 import citySchema from "./citySchema";
 import groupSchema from "./groupSchema";
-import labelSchema from "./labelSchema";
+import interestSchema from "./interestSchema";
+import conversationSchema from "./conversationSchema";
+import messageSchema from "./messageSchema";
 
 const userModel = model("User", UserSchema);
 const eventModel = model("Event", eventSchema);
@@ -13,6 +15,8 @@ const progressionModel = model("Progression", ProgressionSchema);
 const activityModel = model("Activity", activitySchema);
 const cityModel = model("City", citySchema);
 const groupModel = model("Group", groupSchema);
-const labelModel = model("Label", labelSchema);
+const interestModel = model("Interest", interestSchema);
+const conversationModel = model("Conversation", conversationSchema);
+const messageModel = model("Message", messageSchema);
 
-export { cityModel, userModel, eventModel, progressionModel, activityModel, groupModel, labelModel };
+export { cityModel, userModel, eventModel, progressionModel, activityModel, groupModel, interestModel, conversationModel, messageModel };
