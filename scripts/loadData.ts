@@ -26,7 +26,7 @@ import {
 	conversationModel,
 	messageModel
 } from "../src/db/models";
-
+console.log(process.env.MONGODB_HOST)
 mongoose.connect(
 	`mongodb://${process.env.MONGODB_HOST}/${process.env.MONGODB_DBNAME}`
 );

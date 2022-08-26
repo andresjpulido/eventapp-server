@@ -5,8 +5,8 @@ const cors = require('cors');
 import config from '../config';
 
 export default async ({ app }: { app: express.Application }) => {
-    app.get('/status', (req, res) => {
-      console.log("el servicio funciona correctamente")
+  
+    app.get('/status', (req, res) => { 
         res.status(200).end();
     });
   
@@ -25,12 +25,11 @@ export default async ({ app }: { app: express.Application }) => {
         }),
     );
  
-    app.use(config.api.prefix, routes());
- 
-
-
-    function availableRoutes() {
-        return app._router.stack
+    let apipaths = routes();
+    app.use(config.api.prefix, apipaths);
+  
+    function availableRoutes(apipaths) { 
+        let items = apipaths.stack
           .filter(r => r.route)
           .map(r => {
             return {
@@ -38,11 +37,16 @@ export default async ({ app }: { app: express.Application }) => {
               path: r.route.path
             };
           });
-      }
 
-      console.log(JSON.stringify(availableRoutes(), null, 2));
+        console.log("Routes Created")
+        items.forEach(element => {
+          console.log("  ", element.method, element.path);
+        });
 
-
+    }
+     
+    availableRoutes(apipaths);
+       
     app.use((req, res, next) => {
         const err = new Error('Not Found');
         err['status'] = 404;
