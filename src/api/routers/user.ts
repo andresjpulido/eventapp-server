@@ -6,7 +6,7 @@ import middlewares from '../middlewares';
 const route = Router();
 
 export default (app) => {
-
+	
 	app.get("/users", middlewares.auth, async (req, res, next) => {
 		const queryObj = req.query;
 		const serviceInstance = Container.get(userService);

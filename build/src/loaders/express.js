@@ -31,12 +31,17 @@ const bodyParser = __importStar(require("body-parser"));
 const api_1 = __importDefault(require("../api"));
 const cors = require('cors');
 const config_1 = __importDefault(require("../config"));
+const swagger_ui_express_1 = __importDefault(require("swagger-ui-express"));
+const fs_1 = __importDefault(require("fs"));
+let swaggerFile = `${process.cwd()}/swagger/swagger.json`;
+let swaggerData = fs_1.default.readFileSync(swaggerFile, 'utf-8');
+let swaggerJSON = JSON.parse(swaggerData);
 exports.default = async ({ app }) => {
     app.get('/status', (req, res) => {
-        console.log("el servicio funciona correctamente");
         res.status(200).end();
     });
     app.enable('trust proxy');
+    // middlewares
     app.use(cors());
     app.use(bodyParser.urlencoded({ extended: false }));
     app.use(express.json({
@@ -47,9 +52,19 @@ exports.default = async ({ app }) => {
         type: 'application/json',
         verify: undefined,
     }));
-    app.use(config_1.default.api.prefix, (0, api_1.default)());
-    function availableRoutes() {
-        return app._router.stack
+    let apipaths = (0, api_1.default)();
+    app.use(config_1.default.api.prefix, apipaths);
+    app.use("/api-docs", swagger_ui_express_1.default.serve, swagger_ui_express_1.default.setup(swaggerJSON));
+    function apis(apipaths) {
+        let items = apipaths.stack
+            .filter(r => r.route)
+            .map(r => {
+            return config_1.default.api.prefix + r.route.path;
+        });
+        return items;
+    }
+    function availableRoutes(apipaths) {
+        let items = apipaths.stack
             .filter(r => r.route)
             .map(r => {
             return {
@@ -57,8 +72,12 @@ exports.default = async ({ app }) => {
                 path: r.route.path
             };
         });
+        console.log("Routes Created");
+        items.forEach(element => {
+            console.log("  ", element.method, element.path);
+        });
     }
-    console.log(JSON.stringify(availableRoutes(), null, 2));
+    availableRoutes(apipaths);
     app.use((req, res, next) => {
         const err = new Error('Not Found');
         err['status'] = 404;

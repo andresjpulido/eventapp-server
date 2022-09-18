@@ -18,7 +18,10 @@ let EventService = class EventService {
         if (queryObj._id)
             if (!mongoose.Types.ObjectId.isValid(queryObj._id))
                 queryObj._id = null;
-        return await models_1.eventModel.find(queryObj).populate("creator");
+        if (queryObj.group)
+            queryObj.group = { _id: queryObj.group };
+        console.log(queryObj);
+        return await models_1.eventModel.find(queryObj).populate("creator").populate("city").populate("attendees");
     }
     async delete(activityId) {
         if (activityId)

@@ -1,3 +1,6 @@
+#swagger
+swagger/
+
 # Logs
 logs
 *.log

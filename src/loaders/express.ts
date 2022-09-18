@@ -3,6 +3,13 @@ import * as bodyParser from 'body-parser';
 import routes from '../api';
 const cors = require('cors');
 import config from '../config';
+import swaggerUI from 'swagger-ui-express';
+import swaggerJSDoc from 'swagger-jsdoc';
+import fs from 'fs';
+
+let swaggerFile = `${process.cwd()}/swagger/swagger.json`
+let swaggerData = fs.readFileSync(swaggerFile, 'utf-8');
+let swaggerJSON = JSON.parse(swaggerData); 
 
 export default async ({ app }: { app: express.Application }) => {
   
@@ -12,6 +19,7 @@ export default async ({ app }: { app: express.Application }) => {
   
     app.enable('trust proxy');
 
+    // middlewares
     app.use(cors());
     app.use(bodyParser.urlencoded({ extended: false }));
     app.use(
@@ -27,7 +35,20 @@ export default async ({ app }: { app: express.Application }) => {
  
     let apipaths = routes();
     app.use(config.api.prefix, apipaths);
+ 
+    app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerJSON)); 
+    
+function apis (apipaths){
+  let items = apipaths.stack
+  .filter(r => r.route)
+  .map(r => {
+    return config.api.prefix+r.route.path
+  });
   
+return items;
+
+}
+
     function availableRoutes(apipaths) { 
         let items = apipaths.stack
           .filter(r => r.route)

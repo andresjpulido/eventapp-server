@@ -1,64 +1,131 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-require('dotenv').config();
-var mongoose = require('mongoose');
-var _ = require('lodash');
-var events = require('./events.json');
-var users = require('./users.json');
-var countries = require('./countries.json');
+require("dotenv").config();
+var mongoose = require("mongoose");
+var _ = require("lodash");
+var eventsData = require("./events.json");
+var usersData = require("./users.json");
+var cityData = require("./cities.json");
+var groupData = require("./groups.json");
+var interestData = require("./interest.json");
+let model = null;
+let userIds = [];
+let cityIds = [];
+let interestIds = [];
+let groupIds = [];
+let creatorCont = 0;
+let groupCont = 0;
 const models_1 = require("../src/db/models");
+console.log(process.env.MONGODB_HOST);
 mongoose.connect(`mongodb://${process.env.MONGODB_HOST}/${process.env.MONGODB_DBNAME}`);
 var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
+db.on("error", console.error.bind(console, "connection error:"));
 // once the connection is established we define our schemas
-db.once('open', function callback() {
-    models_1.userModel.find().remove();
-});
-/*
-exports.reset = function( req, res ) {
-
-    // get refs to the models we defined above
-    var Users = mongoose.model( 'User' );
-    var LogEntry = mongoose.model( 'LogEntry' );
-
-    // clear all existing documents from the collections
-    Food.find().remove();
-    LogEntry.find().remove();
-
-    // populate the foods collection from json data
-    // nothing fancy here as Food documents do not reference anything else
-    for( var i = 0; i < foodData.length; i++ ) {
-        new Food( foodData[ i ] ).save();
+db.once("open", async function callback() {
+    console.log("connected! " + process.env.MONGODB_HOST + " " + process.env.MONGODB_DBNAME);
+    await remove(models_1.userModel);
+    await remove(models_1.eventModel);
+    await remove(models_1.cityModel);
+    await remove(models_1.groupModel);
+    await remove(models_1.interestModel);
+    await remove(models_1.conversationModel);
+    await remove(models_1.messageModel);
+    for (var i = 0; i < interestData.length; i++) {
+        let iModel = await new models_1.interestModel(interestData[i]).save();
+        interestIds.push(iModel._id);
     }
-
-    // now that the collection is populated we iterate over it
-    Food.find( function( err, foods ) {
-        var foodMap = {};
-
-        // store _ids of Food documents that Mongo generated upon insert
-        for( var i = 0; i < foods.length; i++ ) {
-            var food = foods[i];
-            // I am mapping the ids to the food names because the LogEntry
-            // JSON data contained this field thanks to the original source
-            // data's structure (a spreadsheet).
-            // You could utilize a more sophisticated lookup here if necessary.
-            foodMap[ food.name ] = food._id;
+    for (var i = 0; i < cityData.length; i++) {
+        model = await new models_1.cityModel(cityData[i]).save();
+        cityIds.push(model._id);
+    }
+    for (var i = 0; i < groupData.length; i++) {
+        groupData[i].city = { _id: 0 };
+        groupData[i].city._id = cityIds[0]._id;
+        groupData[i].interests = [];
+        groupData[i].interests.push(interestIds[i]);
+        groupData[i].interests.push(interestIds[i + 1]);
+        groupData[i].interests.push(interestIds[i + 2]);
+        model = await new models_1.groupModel(groupData[i]).save();
+        groupIds.push(model._id);
+    }
+    for (var i = 0; i < usersData.length; i++) {
+        usersData[i].city = { _id: 0 };
+        usersData[i].city._id = cityIds[0]._id;
+        model = await new models_1.userModel(usersData[i]).save();
+        userIds.push(model._id);
+        /*
+        if (groupIds.length - 1 > groupCont + 1) {
+            usersData[i].groups.push(groupIds[groupCont + 1]._id);
+        } else {
+            usersData[i].groups.push(groupIds[groupCont - 1]._id);
         }
-
-        // populate the LogEntries collection from json data
-        for( i = 0; i < logData.length; i++ ) {
-            var logEntry = logData[ i ];
-            // we find and store food._id on LogEntry for reference
-            logEntry._food = foodMap[ logEntry.food_name ];
-
-            // note that only the fields defined in the schema will be
-            // persisted to Mongo, so the foodName field we used for
-            // lookup will not be unnecessarily added to the db
-            new LogEntry( logEntry ).save();
+*/
+    }
+    for (var i = 0; i < eventsData.length; i++) {
+        eventsData[i].creator = { _id: 0 };
+        eventsData[i].city = { _id: 0 };
+        eventsData[i].attendees = [];
+        eventsData[i].creator._id = userIds[creatorCont]._id;
+        eventsData[i].city._id = cityIds[0]._id;
+        if (userIds.length - 1 > creatorCont + 1) {
+            eventsData[i].attendees.push(userIds[creatorCont + 1]._id);
         }
-    } );
-
-    res.redirect( "/" );
+        else {
+            eventsData[i].attendees.push(userIds[creatorCont - 1]._id);
+        }
+        eventsData[i].attendees.push(userIds[creatorCont]._id);
+        if (groupIds[i]) {
+            eventsData[i].group = { _id: 0 };
+            eventsData[i].group._id = groupIds[i];
+            console.log(eventsData[i]);
+        }
+        await new models_1.eventModel(eventsData[i]).save();
+        if (userIds.length - 1 > creatorCont)
+            creatorCont = creatorCont + 1;
+        else
+            creatorCont = 0;
+    }
+    //create conversations
+    let msg = {};
+    let usr1 = { _id: 0 };
+    let usr2 = { _id: 0 };
+    let participants = [];
+    let messages = [];
+    for (let i = 0; i < userIds.length - 2; i++) {
+        usr1._id = userIds[i];
+        usr2._id = userIds[i + 1];
+        participants.push(usr1);
+        participants.push(usr2);
+        msg = { user: usr1, text: makeid(250), pending: false };
+        msg = await new models_1.messageModel(msg).save();
+        messages.push(msg);
+        msg = { user: usr2, text: makeid(200), pending: true };
+        msg = await new models_1.messageModel(msg).save();
+        messages.push(msg);
+        msg = { user: usr1, text: makeid(150), pending: false };
+        msg = await new models_1.messageModel(msg).save();
+        messages.push(msg);
+        msg = { user: usr2, text: makeid(250), pending: true };
+        msg = await new models_1.messageModel(msg).save();
+        messages.push(msg);
+        await new models_1.conversationModel({ participants: participants, messages: messages }).save();
+        //TODO add conversation to participants
+    }
+    mongoose.connection.close();
+    process.exit(1);
+});
+console.log("done!");
+//
+const remove = async (model) => {
+    await model.find().deleteMany();
 };
-*/ 
+let makeid = (length) => {
+    var result = "";
+    var characters = " ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 ";
+    var charactersLength = characters.length;
+    for (var i = 0; i < length; i++) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+};
 //# sourceMappingURL=loadData.js.map

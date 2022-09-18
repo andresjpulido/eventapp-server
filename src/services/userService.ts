@@ -18,10 +18,12 @@ export default class userService {
 		return await userModel.find();
 	}
 
-	public async create(progression) {
-		let newProgression = new userModel(progression);
- 
-		return await newProgression.save();
+	public async create(user) {
+		let newUser = new userModel(user);
+		newUser.city = {
+			id:""
+		}
+		return await newUser.save();
 	 
 	}
 }

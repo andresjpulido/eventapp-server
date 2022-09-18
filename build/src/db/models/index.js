@@ -3,12 +3,17 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.topicModel = exports.activityModel = exports.progressionModel = exports.eventModel = exports.userModel = void 0;
+exports.topicModel = exports.messageModel = exports.conversationModel = exports.interestModel = exports.groupModel = exports.activityModel = exports.progressionModel = exports.eventModel = exports.userModel = exports.cityModel = void 0;
 const mongoose_1 = require("mongoose");
 const userSchema_1 = __importDefault(require("./userSchema"));
 const eventSchema_1 = __importDefault(require("./eventSchema"));
 const progressionSchema_1 = __importDefault(require("./progressionSchema"));
 const activitySchema_1 = __importDefault(require("./activitySchema"));
+const citySchema_1 = __importDefault(require("./citySchema"));
+const groupSchema_1 = __importDefault(require("./groupSchema"));
+const interestSchema_1 = __importDefault(require("./interestSchema"));
+const conversationSchema_1 = __importDefault(require("./conversationSchema"));
+const messageSchema_1 = __importDefault(require("./messageSchema"));
 const topicSchema_1 = __importDefault(require("./topicSchema"));
 const userModel = (0, mongoose_1.model)("User", userSchema_1.default);
 exports.userModel = userModel;
@@ -18,6 +23,16 @@ const progressionModel = (0, mongoose_1.model)("Progression", progressionSchema_
 exports.progressionModel = progressionModel;
 const activityModel = (0, mongoose_1.model)("Activity", activitySchema_1.default);
 exports.activityModel = activityModel;
-const topicModel = (0, mongoose_1.model)("Topic", topicSchema_1.default);
+const cityModel = (0, mongoose_1.model)("City", citySchema_1.default);
+exports.cityModel = cityModel;
+const groupModel = (0, mongoose_1.model)("Group", groupSchema_1.default);
+exports.groupModel = groupModel;
+const interestModel = (0, mongoose_1.model)("Interest", interestSchema_1.default);
+exports.interestModel = interestModel;
+const conversationModel = (0, mongoose_1.model)("Conversation", conversationSchema_1.default);
+exports.conversationModel = conversationModel;
+const messageModel = (0, mongoose_1.model)("Message", messageSchema_1.default);
+exports.messageModel = messageModel;
+const topicModel = (0, mongoose_1.model)("TopicModel", topicSchema_1.default);
 exports.topicModel = topicModel;
 //# sourceMappingURL=index.js.map

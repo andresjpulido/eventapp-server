@@ -22,14 +22,25 @@ const eventSchema = new mongoose_1.Schema({
         type: Number,
         required: false,
     },
-    group: {
-        type: String,
-        required: false,
-    },
     creator: {
         type: mongoose_1.Schema.Types.ObjectId,
-        ref: 'User',
+        ref: "User",
         required: false,
+    },
+    city: {
+        type: mongoose_1.Schema.Types.ObjectId,
+        ref: "City",
+        required: true,
+    },
+    attendees: [
+        {
+            type: mongoose_1.Schema.Types.ObjectId,
+            ref: "User",
+        },
+    ],
+    group: {
+        type: mongoose_1.Schema.Types.ObjectId,
+        ref: "Group"
     }
 }, {
     timestamps: true,

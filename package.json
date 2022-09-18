@@ -8,13 +8,14 @@
     "clean": "rm -rf build && mkdir build",
     "build": "tsc",
     "start": "nodemon",
-    "inspect": "nodemon --inspect src/app.ts",
+    "inspect": "nodemon --inspect src/app.ts doc:generate",
     "test": "NODE_TLS_REJECT_UNAUTHORIZED=0 jest --reporters default jest-stare --coverage --detectOpenHandles --runInBand --testTimeout=4000",
     "heroku-postbuild": "npm run build",
     "lint": "npm run lint:js ",
     "lint:eslint": "eslint --ignore-path .gitignore --ext .ts",
     "lint:js": "npm run lint:eslint src/",
-    "lint:fix": "npm run lint:js -- --fix"
+    "lint:fix": "npm run lint:js -- --fix",
+    "doc:generate":"swagger-cli bundle src/api/swagger/openapi.yaml --outfile swagger/swagger.json"
   },
   "repository": {
     "type": "git",
@@ -57,6 +58,8 @@
     "mongoose": "^6.0.5",
     "reflect-metadata": "^0.1.13",
     "socket.io": "^4.5.0",
+    "swagger-jsdoc": "^6.2.5",
+    "swagger-ui-express": "^4.5.0",
     "typedi": "^0.10.0",
     "uuid": "^8.3.2"
   },

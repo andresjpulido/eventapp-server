@@ -8,10 +8,11 @@ const config_1 = __importDefault(require("../config"));
 async function connect() {
     try {
         await mongoose_1.default.connect(`mongodb://${config_1.default.MONGODB_HOST}/${config_1.default.MONGODB_DBNAME}`, {});
-        console.log("connected to DB");
+        console.log("DB Connected");
+        //mongoose.connection.db.dropDatabase();
     }
     catch (error) {
-        console.log(error.description);
+        console.log("Error connecting to DB", error.description);
     }
 }
 exports.default = connect;

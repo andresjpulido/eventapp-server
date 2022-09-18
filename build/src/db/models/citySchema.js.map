@@ -1,0 +1,1 @@
+{"version":3,"file":"citySchema.js","sourceRoot":"","sources":["../../../../src/db/models/citySchema.js"],"names":[],"mappings":";;AAAA,uCAAkC;AAElC,MAAM,UAAU,GAAG,IAAI,iBAAM,CAC5B;IACC,IAAI,EAAE;QACL,IAAI,EAAE,MAAM;QACZ,QAAQ,EAAE,IAAI;KACd;IACD,MAAM,EAAE;QACP,IAAI,EAAE,MAAM;QACZ,QAAQ,EAAE,IAAI;KACd;CACD,EACD;IACC,UAAU,EAAE,IAAI;CAChB,CACD,CAAC;AAEF,kBAAe,UAAU,CAAC"}

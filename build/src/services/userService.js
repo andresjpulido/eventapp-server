@@ -14,7 +14,7 @@ const models_1 = require("../db/models");
 let userService = class userService {
     constructor() { }
     async get(queryObj) {
-        return await models_1.userModel.find(queryObj);
+        return await models_1.userModel.find(queryObj).populate("city");
     }
     async delete(progressionId) {
         await models_1.userModel.findByIdAndDelete(progressionId);
@@ -23,9 +23,12 @@ let userService = class userService {
         await models_1.userModel.findByIdAndUpdate(id, progression);
         return await models_1.userModel.find();
     }
-    async create(progression) {
-        const newProgression = new models_1.userModel(progression);
-        return await newProgression.save();
+    async create(user) {
+        let newUser = new models_1.userModel(user);
+        newUser.city = {
+            id: ""
+        };
+        return await newUser.save();
     }
 };
 userService = __decorate([

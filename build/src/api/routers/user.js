@@ -6,10 +6,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const userService_1 = __importDefault(require("../../services/userService"));
 const typedi_1 = require("typedi");
-const auth = require("../middlewares/auth");
+const middlewares_1 = __importDefault(require("../middlewares"));
 const route = (0, express_1.Router)();
 exports.default = (app) => {
-    app.get("/users", async (req, res, next) => {
+    app.get("/users", middlewares_1.default.auth, async (req, res, next) => {
         const queryObj = req.query;
         const serviceInstance = typedi_1.Container.get(userService_1.default);
         let list = [];

@@ -1,0 +1,1 @@
+{"version":3,"file":"interestSchema.js","sourceRoot":"","sources":["../../../../src/db/models/interestSchema.js"],"names":[],"mappings":";;AAAA,uCAAkC;AAElC,MAAM,cAAc,GAAG,IAAI,iBAAM,CAChC;IACC,IAAI,EAAE;QACL,IAAI,EAAE,MAAM;QACZ,QAAQ,EAAE,IAAI;KACd;CACD,EACD;IACC,UAAU,EAAE,IAAI;CAChB,CACD,CAAC;AAEF,kBAAe,cAAc,CAAC"}
