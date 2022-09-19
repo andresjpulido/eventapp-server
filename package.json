@@ -7,7 +7,8 @@
     "populatedb": "npx ts-node ./scripts/loadData.ts",
     "clean": "rm -rf build && mkdir build",
     "build": "tsc",
-    "start": "nodemon",
+    "start": "node build/src/app.js",
+    "dev": "nodemon",
     "inspect": "nodemon --inspect src/app.ts doc:generate",
     "test": "NODE_TLS_REJECT_UNAUTHORIZED=0 jest --reporters default jest-stare --coverage --detectOpenHandles --runInBand --testTimeout=4000",
     "heroku-postbuild": "npm run build",
@@ -15,7 +16,7 @@
     "lint:eslint": "eslint --ignore-path .gitignore --ext .ts",
     "lint:js": "npm run lint:eslint src/",
     "lint:fix": "npm run lint:js -- --fix",
-    "doc:generate":"swagger-cli bundle src/api/swagger/openapi.yaml --outfile swagger/swagger.json"
+    "doc:generate":"swagger-cli bundle src/api/swagger/openapi.yaml --outfile ./swagger/swagger.json"
   },
   "repository": {
     "type": "git",

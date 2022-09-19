@@ -31,7 +31,7 @@ async function startServer() {
           console.log(value)
       });
 
-    server.listen(config.port, () => {
+    server.listen(config.port || 4000, () => {
         console.log('listening on *:', config.port);
       });
 
