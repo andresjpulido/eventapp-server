@@ -9,7 +9,7 @@
     "build": "tsc",
     "start": "node build/src/app.js",
     "dev": "nodemon",
-    "inspect": "nodemon --inspect src/app.ts doc:generate",
+    
     "test": "NODE_TLS_REJECT_UNAUTHORIZED=0 jest --reporters default jest-stare --coverage --detectOpenHandles --runInBand --testTimeout=4000",
     "heroku-postbuild": "npm run build",
     "lint": "npm run lint:js ",
