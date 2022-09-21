@@ -19,7 +19,6 @@
     "lint:eslint": "eslint --ignore-path .gitignore --ext .ts",
     "lint:js": "npm run lint:eslint src/",
     "lint:fix": "npm run lint:js -- --fix"
-    
   },
   "repository": {
     "type": "git",
@@ -58,6 +57,7 @@
   },
   "homepage": "https://github.com/andresjpulido/eventapp-server#readme",
   "dependencies": {
+    "@apidevtools/swagger-cli": "^4.0.4",
     "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
     "concurrently": "^7.4.0",

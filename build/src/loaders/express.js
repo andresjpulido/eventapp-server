@@ -37,7 +37,7 @@ let swaggerFile = `${process.cwd()}/public/swagger.json`;
 console.log("swaggerFile", swaggerFile);
 let swaggerData = fs_1.default.readFileSync(swaggerFile, 'utf-8');
 let swaggerJSON = JSON.parse(swaggerData);
-let swaggerCSS = fs_1.default.readFileSync((`${process.cwd()}/src/api/docs/swagger.css`), 'utf8');
+let swaggerCSS = fs_1.default.readFileSync((`${process.cwd()}/public/swagger.css`), 'utf8');
 exports.default = async ({ app }) => {
     app.get('/status', (req, res) => {
         res.status(200).end();
