@@ -1,0 +1,63 @@
+openapi: "3.0.0"
+info:
+  version: 1.0.0
+  title: EventsApp API
+  description: API of Events App, a social media platform for hosting and organizing in-person and virtual activities, gatherings, and events for people and communities of similar interests, hobbies, and professions. It.
+  license:
+    name: MIT
+  contact:  
+    name: API Creator
+    url: http://www.andresjpulido.com/
+    email: andresjpulido@gmail.com
+servers:
+  - url: http://eventsapp.swagger.io/v1
+tags:
+  - name: users
+paths:
+  /activities:
+    $ref: "./resources/activities.yaml"
+  /activities/{petId}:
+    $ref: "./resources/activity.yaml"
+  /cities:
+    $ref: "./resources/cities.yaml"
+  /cities/{petId}:
+    $ref: "./resources/city.yaml" 
+  /conversations:
+    $ref: "./resources/conversations.yaml"
+  /conversations/{petId}:
+    $ref: "./resources/conversation.yaml"  
+  /events:
+    $ref: "./resources/events.yaml"
+  /events/{petId}:
+    $ref: "./resources/event.yaml"
+  /groups:
+    $ref: "./resources/groups.yaml"
+  /groups/{petId}:
+    $ref: "./resources/group.yaml"
+  /interests:
+    $ref: "./resources/interests.yaml"
+  /interests/{petId}:
+    $ref: "./resources/interest.yaml"
+  /messages:
+    $ref: "./resources/messages.yaml"
+  /messages/{petId}:
+    $ref: "./resources/message.yaml"
+  /topics:
+    $ref: "./resources/topics.yaml"
+  /topics/{petId}:
+    $ref: "./resources/topic.yaml"
+  /users:
+    $ref: "./resources/users.yaml"
+  /users/{petId}:
+    $ref: "./resources/user.yaml"
+  /pets:
+    $ref: "./resources/pets.yaml"
+  /pets/{petId}:
+    $ref: "./resources/pet.yaml"
+components:
+  parameters:
+    $ref: "./parameters/_index.yaml"
+  schemas:
+    $ref: "./schemas/_index.yaml"
+  responses:
+    $ref: "./responses/_index.yaml"

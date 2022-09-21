@@ -7,9 +7,11 @@ import swaggerUI from 'swagger-ui-express';
 import swaggerJSDoc from 'swagger-jsdoc';
 import fs from 'fs';
 
-let swaggerFile = `${process.cwd()}/swagger/swagger.json`
+let swaggerFile = `${process.cwd()}/public/swagger.json`
+console.log("swaggerFile" , swaggerFile)
 let swaggerData = fs.readFileSync(swaggerFile, 'utf-8');
 let swaggerJSON = JSON.parse(swaggerData); 
+let swaggerCSS: any = fs.readFileSync((`${process.cwd()}/public/swagger.css`), 'utf8');
 
 export default async ({ app }: { app: express.Application }) => {
   
@@ -32,12 +34,13 @@ export default async ({ app }: { app: express.Application }) => {
             verify: undefined,
         }),
     );
- 
+    app.use(express.static("public"));
+    app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerJSON, null, null, swaggerCSS)); 
+    
     let apipaths = routes();
     app.use(config.api.prefix, apipaths);
  
-    app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerJSON)); 
-    
+     
 function apis (apipaths){
   let items = apipaths.stack
   .filter(r => r.route)

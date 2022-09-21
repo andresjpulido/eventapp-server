@@ -33,9 +33,11 @@ const cors = require('cors');
 const config_1 = __importDefault(require("../config"));
 const swagger_ui_express_1 = __importDefault(require("swagger-ui-express"));
 const fs_1 = __importDefault(require("fs"));
-let swaggerFile = `${process.cwd()}/swagger/swagger.json`;
+let swaggerFile = `${process.cwd()}/public/swagger.json`;
+console.log("swaggerFile", swaggerFile);
 let swaggerData = fs_1.default.readFileSync(swaggerFile, 'utf-8');
 let swaggerJSON = JSON.parse(swaggerData);
+let swaggerCSS = fs_1.default.readFileSync((`${process.cwd()}/src/api/docs/swagger.css`), 'utf8');
 exports.default = async ({ app }) => {
     app.get('/status', (req, res) => {
         res.status(200).end();
@@ -52,9 +54,10 @@ exports.default = async ({ app }) => {
         type: 'application/json',
         verify: undefined,
     }));
+    app.use(express.static("public"));
+    app.use("/api-docs", swagger_ui_express_1.default.serve, swagger_ui_express_1.default.setup(swaggerJSON, null, null, swaggerCSS));
     let apipaths = (0, api_1.default)();
     app.use(config_1.default.api.prefix, apipaths);
-    app.use("/api-docs", swagger_ui_express_1.default.serve, swagger_ui_express_1.default.setup(swaggerJSON));
     function apis(apipaths) {
         let items = apipaths.stack
             .filter(r => r.route)

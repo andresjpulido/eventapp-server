@@ -1,0 +1,82 @@
+get:
+  summary: List
+  operationId: activityById
+  description: Activities
+  tags:
+  - activities
+  parameters:
+    - $ref: "../parameters/path/petId.yaml"
+  responses:
+    '200':
+      description: Element Activity
+      headers:
+        x-next:
+          description: A link to the next page of responses
+          schema:
+            type: string
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/Activity.yaml"
+    '400':
+      description: Bad request. User ID must be an integer and larger than 0.
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/Error.yaml"
+    '401':
+      description: Authorization information is missing or invalid.
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/Error.yaml"
+    '404':
+      description: A user with the specified ID was not found.
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/Error.yaml"
+    '5XX':
+      description: Unexpected error.
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/Error.yaml"
+    default:
+      $ref: "../responses/UnexpectedError.yaml"
+
+put:
+  summary: Update
+  operationId: updateActivity
+  description: Update an activity
+  tags:
+  - activities
+  responses:
+    '201':
+        description: Activity updated
+    '404':
+        description: A user with the specified ID was not found.
+        content:
+          application/json:
+            schema:
+              $ref: "../schemas/Error.yaml"
+    default:
+        $ref : "../responses/UnexpectedError.yaml"
+
+delete:
+  summary: Delete an activity
+  operationId: deleteActivity
+  description: Delete an activity
+  tags:
+  - activities
+  responses:
+    '201':
+        $ref : "../responses/NullResponse.yaml"
+    '404':
+        description: A user with the specified ID was not found.
+        content:
+          application/json:
+            schema:
+              $ref: "../schemas/Error.yaml"
+    default:
+        $ref : "../responses/UnexpectedError.yaml"

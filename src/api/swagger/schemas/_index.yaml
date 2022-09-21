@@ -1,0 +1,22 @@
+Pet:
+  $ref: "./Pet.yaml"
+Error:
+  $ref: "./Error.yaml"
+User:
+  $ref: "./User.yaml"
+Activity:
+  $ref: "./Activity.yaml"
+City:
+  $ref: "./City.yaml"
+Conversation:
+  $ref: "./Conversation.yaml"
+Event:
+  $ref: "./Event.yaml"
+Group:
+  $ref: "./Group.yaml"
+Interest:
+  $ref: "./Interest.yaml"
+Message:
+  $ref: "./Message.yaml"
+Topic:
+  $ref: "./Topic.yaml"

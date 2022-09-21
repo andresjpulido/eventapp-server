@@ -1,0 +1,33 @@
+get:
+  summary: List
+  operationId: listPets
+  description: List all users
+  tags:
+  - events
+  parameters:
+    - $ref: "../parameters/query/limit.yaml"
+  responses:
+    '200':
+      description: A paged array of users
+      headers:
+        x-next:
+          description: A link to the next page of responses
+          schema:
+            type: string
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/User.yaml"
+    default:
+      $ref: "../responses/UnexpectedError.yaml"
+post:
+  summary: Create
+  operationId: createPets
+  description: Create a pet
+  tags:
+  - events
+  responses:
+    '201':
+        $ref : "../responses/NullResponse.yaml"
+    default:
+        $ref : "../responses/UnexpectedError.yaml"

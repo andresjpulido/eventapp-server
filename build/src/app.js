@@ -29,7 +29,7 @@ async function startServer() {
     io.on('message', (value) => {
         console.log(value);
     });
-    server.listen(config_1.default.port, () => {
+    server.listen(config_1.default.port || 4000, () => {
         console.log('listening on *:', config_1.default.port);
     });
     /*

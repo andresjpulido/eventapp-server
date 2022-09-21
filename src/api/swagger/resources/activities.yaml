@@ -1,0 +1,34 @@
+get:
+  summary: List all activities
+  operationId: listActivities
+  description: List all activities
+  tags:
+  - activities
+  parameters:
+    - $ref: "../parameters/query/limit.yaml"
+  responses:
+    '200':
+      description: A paged array of activities
+      headers:
+        x-next:
+          description: A link to the next page of responses
+          schema:
+            type: string
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/Activity.yaml"
+    default:
+      $ref: "../responses/UnexpectedError.yaml"
+
+post:
+  summary: Create an activity
+  operationId: createActivity
+  description: Create an activity
+  tags:
+  - activities
+  responses:
+    '201':
+        description: Activity created
+    default:
+        $ref : "../responses/UnexpectedError.yaml"

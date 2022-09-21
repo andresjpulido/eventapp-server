@@ -1,0 +1,45 @@
+get:
+  summary: List
+  operationId: listPets
+  description: List all users
+  tags:
+  - cities
+  parameters:
+    - $ref: "../parameters/query/limit.yaml"
+  responses:
+    '200':
+      description: A paged array of users
+      headers:
+        x-next:
+          description: A link to the next page of responses
+          schema:
+            type: string
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/User.yaml"
+    default:
+      $ref: "../responses/UnexpectedError.yaml"
+put:
+  summary: Update
+  operationId: updateActivity
+  description: Update an activity
+  tags:
+  - cities
+  responses:
+    '201':
+        $ref : "../responses/NullResponse.yaml"
+    default:
+        $ref : "../responses/UnexpectedError.yaml"
+
+delete:
+  summary: Delete a city
+  operationId: deletecity
+  description: Delete a city
+  tags:
+  - cities
+  responses:
+    '201':
+        $ref : "../responses/NullResponse.yaml"
+    default:
+        $ref : "../responses/UnexpectedError.yaml"

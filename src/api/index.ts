@@ -8,7 +8,7 @@ import event from "./routers/event";
 import group from "./routers/group";
 import label from "./routers/interest";
 import chat from "./routers/chat";
-import city from "./routers/city";
+import city from "./routers/city"; 
 
 export default () => {
 	const app = Router();
@@ -22,7 +22,7 @@ export default () => {
 	label(app);
 	auth(app);
 	chat(app);
-	city(app);
+	city(app); 
 
 	return app;
 };
