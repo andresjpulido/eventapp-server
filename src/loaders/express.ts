@@ -16,7 +16,7 @@ let swaggerCSS: any = fs.readFileSync((`${process.cwd()}/public/swagger.css`), '
 export default async ({ app }: { app: express.Application }) => {
   
     app.get('/status', (req, res) => { 
-        res.status(200).end();
+        res.status(200).end("test conection OK");
     });
   
     app.enable('trust proxy');
